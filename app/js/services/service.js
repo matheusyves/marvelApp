@@ -22,13 +22,13 @@ function personagensService($http){
 
     function searchCharacter(entrada){
         var hash = criarHash();
-        var urlAPI = "http://gateway.marvel.com/v1/public/characters?&"+'&nameStartsWith=' + entrada +"&ts="+timeStamp+"&apikey="+publicKey+"&hash="+hash;
+        var urlAPI = "https://gateway.marvel.com/v1/public/characters?&"+'&nameStartsWith=' + entrada +"&ts="+timeStamp+"&apikey="+publicKey+"&hash="+hash;
         return $http.get(urlAPI).then(tratarResposta, tratarErro);
     }
 
     function getCharacterList(){
         var hash = criarHash();
-        var urlAPI = "http://gateway.marvel.com/v1/public/characters?limit=9&"+"&ts="+timeStamp+"&apikey="+publicKey+"&hash="+hash;
+        var urlAPI = "https://gateway.marvel.com/v1/public/characters?limit=9&"+"&ts="+timeStamp+"&apikey="+publicKey+"&hash="+hash;
         return $http.get(urlAPI).then(tratarResposta, tratarErro);
     }
 
