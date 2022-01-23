@@ -1,0 +1,51 @@
+body {
+    background-image: url("background.jpg");
+}
+
+.card {
+    border: none;
+    height: 20rem;
+}
+
+.forms-inputs {
+    position: relative
+}
+
+.forms-inputs span {
+    position: absolute;
+    top: -1.125rem;
+    left: 0.625rem;
+    background-color: #fff;
+    padding: 0.313rem 0.625rem;
+    font-size: 0.938rem;
+}
+
+.forms-inputs input {
+    height: 3.125rem;
+    border: 0.125rem solid #eee;
+    width: 100%;
+}
+
+.forms-inputs input:focus {
+    box-shadow: none;
+    outline: none;
+    border: 0.125rem solid #000
+}
+
+.btn-criado {
+    height: 3.125rem;
+}
+
+.success-data {
+    display: flex;
+    flex-direction: column
+}
+
+.bxs-badge-check {
+    font-size: 5.625rem;
+}
+
+.error-login{
+    color: red;
+}
+
