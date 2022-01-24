@@ -12,3 +12,7 @@ Bootstrap da aplicação feito utilizando o angular-seed.
 ### Requisitos
 
 Layout responsivo e mobile first, uso dos recursos do AngularJS, tela de login e proteção de rotas.
+
+### TODO
+
+Erro de CORS ao tentar recuperar a URL das comics através do ID (modal das histórias dos personagens).
