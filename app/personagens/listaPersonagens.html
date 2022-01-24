@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-3">
-            <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Voltar à tela de pesquisa</button>
+            <button type="submit" class="btn btn-primary" style="margin-top: 10px;" ng-click="vm.voltarPraPesquisa()">Voltar à tela de pesquisa</button>
         </div>
         <div class="col-7"></div>
         <div class="col-2" style="margin-top: 10px;">
@@ -15,7 +15,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{personagem.name}}</h5>
                     <p class="card-text">{{personagem.description}}</p>
-                    <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" ng-click="vm.getComicsList(personagem.id)" >APARECE EM</a>
+                    <button type="submit" class="btn btn-primary"><a data-bs-toggle="modal" data-bs-target="#exampleModal" ng-click="vm.getComicsList(personagem.id)" >APARECE EM</a></button>
                 </div>
             </div>
         </div>

@@ -9,6 +9,7 @@ app.controller("personagensController", ['$routeParams', 'personagensService', '
         vm.getComicsList = getComicsList;
         vm.linkToBuyComic = linkToBuyComic;
         vm.deslogar = deslogar;
+        vm.voltarPraPesquisa = voltarPraPesquisa;
         
 
         init();
@@ -58,6 +59,10 @@ app.controller("personagensController", ['$routeParams', 'personagensService', '
                 console.log("response", response);
             })
 
+        }
+
+        function voltarPraPesquisa(){
+            $location.path('home');
         }
 
         function deslogar() {
