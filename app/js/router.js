@@ -13,7 +13,7 @@ app.config(['$routeProvider',router]);
       controller:"homeController as vm"
     })
       .when("/search/:nome", {
-        templateUrl:"/personagens/modal.html",
+        templateUrl:"/personagens/listaPersonagens.html",
         controller:"personagensController as vm",
       })
       .otherwise('/home');

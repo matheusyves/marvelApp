@@ -9,26 +9,33 @@ function personagensService($http){
     var service = {
         getComicsList : getComicsList,
         searchCharacter : searchCharacter,
-        getCharacterList : getCharacterList
+        getCharacterList : getCharacterList,
+        getLinkToBuyComic : getLinkToBuyComic
     };
 
     return service;
 
-    function getComicsList(codigo){
+    function getComicsList(id){
         var hash = criarHash();
-        var urlAPI = "https://gateway.marvel.com:443/v1/public/characters/"+codigo+"/stories?ts="+timeStamp+"&apikey="+publicKey+"&hash="+hash;
+        var urlAPI = "https://gateway.marvel.com:443/v1/public/characters/"+id+"/stories?ts="+timeStamp+"&apikey="+publicKey+"&hash="+hash;
         return $http.get(urlAPI).then(tratarResposta, tratarErro);
     }
 
-    function searchCharacter(entrada){
+    function searchCharacter(nome){
         var hash = criarHash();
-        var urlAPI = "https://gateway.marvel.com/v1/public/characters?&"+'&nameStartsWith=' + entrada +"&ts="+timeStamp+"&apikey="+publicKey+"&hash="+hash;
+        var urlAPI = "https://gateway.marvel.com/v1/public/characters?&"+'&nameStartsWith=' + nome +"&ts="+timeStamp+"&apikey="+publicKey+"&hash="+hash;
         return $http.get(urlAPI).then(tratarResposta, tratarErro);
     }
 
     function getCharacterList(){
         var hash = criarHash();
         var urlAPI = "https://gateway.marvel.com/v1/public/characters?limit=9&"+"&ts="+timeStamp+"&apikey="+publicKey+"&hash="+hash;
+        return $http.get(urlAPI).then(tratarResposta, tratarErro);
+    }
+
+    function getLinkToBuyComic(id){
+        var hash = criarHash();
+        var urlAPI = "https://gateway.marvel.com:443/v1/public/comics/"+id+"&ts="+timeStamp+"&apikey="+publicKey+"&hash="+hash;
         return $http.get(urlAPI).then(tratarResposta, tratarErro);
     }
 

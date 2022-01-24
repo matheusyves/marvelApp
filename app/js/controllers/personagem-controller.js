@@ -1,12 +1,14 @@
 var app = angular.module('PersonagensApp');
-app.controller("personagensController", ['$routeParams', 'personagensService',
-    function($routeParams, personagensService){
+app.controller("personagensController", ['$routeParams', 'personagensService', '$location', '$cookies',
+    function($routeParams, personagensService, $location, $cookies){
 
         var vm = this;
 
         vm.nameCharacter = "";
         vm.searchCharacter = searchCharacter;
         vm.getComicsList = getComicsList;
+        vm.linkToBuyComic = linkToBuyComic;
+        vm.deslogar = deslogar;
         
 
         init();
@@ -47,6 +49,20 @@ app.controller("personagensController", ['$routeParams', 'personagensService',
                     item.foto = item.thumbnail.path + "." + item.thumbnail.extension;
                 })
             });
+        }
+
+        function linkToBuyComic(id){
+            console.log("id", id);
+            personagensService.getLinkToBuyComic(id).then(function(response){
+                vm.responseGetLink = response;
+                console.log("response", response);
+            })
+
+        }
+
+        function deslogar() {
+            $cookies.remove('tokenValidado');
+            $location.path('login');
         }
 
 

@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="offset-10 col-2 " style="margin-top: 10px;">
+            <button type="submit" class="btn btn-primary"><i class="fa fa-sign-out" style="font-size:medium;color:white; " ng-click="vm.deslogar()"></i></button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4" ng-repeat="personagem in vm.responseSearch">
+            <div class="card text-center">
+                <img src="{{personagem.foto}}" alt="" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">{{personagem.name}}</h5>
+                    <p class="card-text">{{personagem.description}}</p>
+                    <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" ng-click="vm.getComicsList(personagem.id)" >APARECE EM</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal com a lista de comics do personagem -->
+
+<div ng-include="'personagens/modalComicsPersonagens.html'"></div>

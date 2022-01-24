@@ -2,7 +2,7 @@
 var express = require('express');
 var cors = require('cors');
 var jwt = require('jsonwebtoken');
-var SECRET = 'SFMarvel';
+var SECRET = 'marveluser';
 var bodyParser = require('body-parser');
 
 // App
@@ -23,11 +23,11 @@ function verifica(req, res, next){
 };
 
 app.get('/cliente', verifica, (req, res) =>{
-  res.json([{id: 1, nome: 'SFMarvel'}]);
+  res.json([{id: 1, nome: 'marveluser'}]);
 });
 
 app.post('/login', (req, res) =>{
-  if(req.body.user ==='SFMarvel' && req.body.password === '1234'){
+  if(req.body.user ==='marveluser' && req.body.password === '1234'){
     const token = jwt.sign({userId: 1}, SECRET, {expiresIn: 600});
     return res.json({auth: true, token});
   }

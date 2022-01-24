@@ -1,5 +1,8 @@
 body {
   background-image: url("img/background.jpg");
+  /* max-width: 100%;
+  height: auto; */
+  
 }
 
 .card {
@@ -30,7 +33,7 @@ form.example input[type=text] {
   font-size: 17px;
   border: 1px solid grey;
   float: left;
-  width: 610px;
+  width: 85%;
   background: #ffffff;
   /* text-align: center; */
 }
@@ -38,7 +41,7 @@ form.example input[type=text] {
 /* Style the submit button */
 form.example button {
   float: left;
-  width: 70px;
+  width: 15%;
   padding: 10px;
   background: #2196F3;
   color: white;

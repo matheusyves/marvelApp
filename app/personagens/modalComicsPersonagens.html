@@ -1,0 +1,45 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Histórias</h5>
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal"
+                    aria-label="Close">X</button>
+            </div>
+            <div class="modal-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">TÍTULO</th>
+                            <th scope="col">DESCRIÇÃO</th>
+                            <th scope="col">ÚLTIMA ATT</th>
+                    
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="comics in vm.responseComics">
+                            <td><a href="" data-toggle="tooltip" title="Comprar agora" style="color: black;" ng-click="vm.linkToBuyComic(comics.id);" >
+                                {{comics.title}}
+                            </a>
+                            </td>
+                            <td>
+                                {{comics.description}}
+                            </td>
+                            <td>
+                                {{comics.modified | formatarTimeStamp}}
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot data-ng-if="vm.responseComics.length === 0">
+                        <tr>
+                            <td>Esse personagem não aparece em nenhuma revista.</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
