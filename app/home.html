@@ -2,7 +2,7 @@
  <div class="container">
     <div class="row">
         <div class="offset-10 col-2 " style="margin-top: 10px;">
-            <button type="submit" class="btn btn-primary"><i class="fa fa-sign-out" style="font-size:medium;color:white; " ng-click="vm.deslogar()"></i></button>
+            <button type="submit" class="btn btn-primary" data-toggle="tooltip" title="Deslogar"><i class="fa fa-sign-out" style="font-size:medium;color:white; " ng-click="vm.deslogar()"></i></button>
         </div>
     </div>
     <div class="row">
@@ -15,7 +15,7 @@
     <div class="row">
         <div class="col-sm-12" style="max-width: 100%;">
             <form class="example">
-                <input type="text" placeholder="Search..." name="search" ng-model="vm.name">
+                <input type="text" placeholder="Pesquisar personagem pelo nome" name="search" ng-model="vm.name">
                 <button type="submit" ng-click="vm.searchCharacter()"><i class="fa fa-search"></i></button>
             </form>
         </div>

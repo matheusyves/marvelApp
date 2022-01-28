@@ -11,7 +11,7 @@ Bootstrap da aplicação feito utilizando o angular-seed.
 
 ### Requisitos
 
-Layout responsivo e mobile first, uso dos recursos do AngularJS, tela de login e proteção de rotas.
+Layout responsivo e mobile first (os estilos são aplicados primeiro pra dispositivos móveis, depois são aplicadas substituições para telas maiores), uso dos recursos do AngularJS, tela de login e proteção de rotas.
 
 ### TODO
 

@@ -16,22 +16,11 @@
     "express": "^4.17.2",
     "html5-boilerplate": "0.0.1",
     "http-server": "^14.0.0",
-    "jasmine-core": "^2.99.1",
     "jsonwebtoken": "^8.5.1",
-    "karma-cli": "^2.0.0",
-    "karma-coverage": "^1.1.2",
-    "karma-jasmine": "^1.1.2",
-    "phantomjs": "^2.1.7",
-    "phantomjs-prebuilt": "^2.1.16",
     "protractor": "^7.0.0"
   },
   "devDependencies": {
-    "babel-polyfill": "^6.26.0",
-    "jasmine": "^4.0.2",
-    "karma": "^6.3.11",
-    "karma-phantomjs-launcher": "^1.0.4",
-    "karma-requirejs": "^1.1.0",
-    "karma-spec-reporter": "0.0.32"
+    "babel-polyfill": "^6.26.0"
   },
   "scripts": {
     "start": "node serve.js",
