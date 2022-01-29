@@ -3,7 +3,11 @@
         <div class="col-3">
             <button type="submit" class="btn btn-primary" style="margin-top: 10px;" ng-click="vm.voltarPraPesquisa()">Voltar à tela de pesquisa</button>
         </div>
-        <div class="col-7"></div>
+        <div class="row">
+            <div class="col-6 offset-3">
+                <img class="img-fluid" src="img/marvel-logo-4.png" style="margin-top: 10px;">
+            </div>
+        </div>
         <div class="col-2" style="margin-top: 10px;">
             <button type="submit" class="btn btn-primary"><i class="fa fa-sign-out" style="font-size:medium;color:white; " ng-click="vm.deslogar()"></i></button>
         </div>
@@ -11,15 +15,25 @@
     <div class="row">
         <div class="col-md-4" ng-repeat="personagem in vm.responseSearch">
             <div class="card text-center">
-                <img src="{{personagem.foto}}" alt="" class="card-img-top">
+                <img src="{{personagem.foto}}" alt="" class="card-img-top" data-toggle="tooltip" title="{{personagem.description}}">
                 <div class="card-body">
                     <h5 class="card-title">{{personagem.name}}</h5>
-                    <p class="card-text">{{personagem.description}}</p>
+                    <!-- <p class="card-text">{{personagem.description}}</p> -->
                     <button type="submit" class="btn btn-primary"><a data-bs-toggle="modal" data-bs-target="#exampleModal" ng-click="vm.getComicsList(personagem.id)" >APARECE EM</a></button>
                 </div>
             </div>
         </div>
     </div>
+    <!-- carousel -->
+    <!-- <div class="row">
+        <div class="col-12">
+            <data-owl-carousel class="owl-carousel" data-options="{navigation: false, pagination: true, rewindNav : false}">
+                <div owl-carousel-item="" ng-repeat="personagem in vm.responseSearch" class="item">
+                  <img src="{{personagem.foto}}" alt="" class="card-img-top" data-toggle="tooltip" title="{{personagem.description}}">
+                </div>
+              </data-owl-carousel>
+        </div>
+    </div> -->
 </div>
 
 <!-- Modal com a lista de comics do personagem -->

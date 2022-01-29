@@ -48,6 +48,9 @@ app.controller("personagensController", ['$routeParams', 'personagensService', '
 
                 angular.forEach(vm.responseSearch, function(item){
                     item.foto = item.thumbnail.path + "." + item.thumbnail.extension;
+                    if (item.description === ""){
+                        item.description = "Não há descrição para o personagem."
+                    }
                 })
             });
         }

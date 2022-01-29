@@ -17,6 +17,7 @@
     "html5-boilerplate": "0.0.1",
     "http-server": "^14.0.0",
     "jsonwebtoken": "^8.5.1",
+    "owl.carousel": "^2.3.4",
     "protractor": "^7.0.0"
   },
   "devDependencies": {
